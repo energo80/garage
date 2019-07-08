@@ -32,4 +32,6 @@ Modified by Syncro Soft 2016.
         <topicref href="concepts/workbench.dita" type="concept"/>
         <topicref href="concepts/wwfluid.dita" type="concept"/>
     </topicref>
+    <topicref href="concepts/SchemeGarage.ditamap" format="ditamap"/>
+    <topicref href="concepts/garage_SCHEME_ENUM.ditamap" format="ditamap"/>
 </map>
