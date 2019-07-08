@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"> 
+<subjectScheme>
+    
+    <enumerationdef>
+        <!-- Bind an attribute to a tree of related values -->
+        <attributedef name="props"/>
+        <subjectdef keyref="garage.propsSbjKey"/>
+    </enumerationdef>
+</subjectScheme>
