@@ -9,10 +9,10 @@
 Modified by Syncro Soft 2016.
 -->
 <map>
-  <topicref href="tasks/carMaintenance.dita">
-    <topicref href="tasks/changingtheoil.dita" type="task" audience="expert"/>
-    <topicref href="tasks/washingthecar.dita" type="task"/>
-  </topicref>
+  <topicref href="tasks/carMaintenance.dita" props="__VIDEOS_w_LOCATION_PRODUCTS__.props">
+        <topicref href="tasks/changingtheoil.dita" type="task" audience="expert"/>
+        <topicref href="tasks/washingthecar.dita" type="task"/>
+    </topicref>
     <topicref href="tasks/garagetaskoverview.dita" type="concept" audience="expert novice">
         <topicref href="tasks/organizing.dita" type="task"/>
         <topicref href="tasks/shovellingsnow.dita" type="task"/>
