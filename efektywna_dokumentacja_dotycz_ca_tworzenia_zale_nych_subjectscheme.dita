@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="efektywna_dokumentacja_dotycz_ca_tworzenia_zale_nych_subjectscheme">
+    <title>Efektywna dokumentacja dotycząca tworzenia zależnych SubjectScheme</title>
+    <body>
+        <p></p>
+        <section id="section_rw3_w3v_33b">
+            <title>Pierwsza mapa <term>SubjectScheme</term></title>
+            <codeblock>&lt;subjectScheme>
+  &lt;subjectdef keys="os" navtitle="Operating system">
+    &lt;subjectdef keys="linux" navtitle="Linux">
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/>
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="mswin" navtitle="Windows"/>
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/>
+  &lt;/subjectdef>
+  &lt;enumerationdef>
+    &lt;attributedef name="platform"/>
+    &lt;subjectdef keyref="os"/>
+  &lt;/enumerationdef>
+&lt;/subjectScheme></codeblock>
+        </section>
+        <section id="section_y4x_y3v_33b">
+            <title>Druga <sub>podrzędna</sub> mapa <term>SubjectScheme</term></title>
+            <codeblock>&lt;subjectScheme>
+  &lt;schemeref href="baseOS.ditamap"/>
+  &lt;subjectdef keyref="os">
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/>
+    &lt;subjectdef keyref="mswin">
+      &lt;subjectdef keys="winxp"  navtitle="Windows XP"/>
+      &lt;subjectdef keys="winvis" navtitle="Windows Vista"/>
+    &lt;/subjectdef>
+  &lt;/subjectdef>
+&lt;/subjectScheme></codeblock>
+        </section>
+        <section id="section_xd5_bjv_33b">
+            <title>Rezultat</title>
+            <p>W wyniku tak powiązanych map tworzy się suma zależności, której efekt można zapisać
+                jak
+                niżej<codeblock>&lt;subjectScheme>
+  &lt;subjectdef keys="os" navtitle="Operating system">
+    &lt;subjectdef keys="linux" navtitle="Linux">
+      &lt;subjectdef keys="redhat" navtitle="RedHat Linux"/>
+      &lt;subjectdef keys="suse"   navtitle="SuSE Linux"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="macos" navtitle="Macintosh"/>
+    &lt;subjectdef keys="mswin" navtitle="Windows">
+      &lt;subjectdef keys="winxp" navtitle="Windows XP"/>
+      &lt;subjectdef keys="win98" navtitle="Windows Vista"/>
+    &lt;/subjectdef>
+    &lt;subjectdef keys="zos"   navtitle="z/OS"/>
+  &lt;/subjectdef>
+  &lt;enumerationdef>
+    &lt;attributedef name="platform"/>
+    &lt;subjectdef keyref="os"/>
+  &lt;/enumerationdef>
+&lt;/subjectScheme></codeblock></p>
+        </section>
+    </body>
+    <related-links>
+        <link href="https://docs.oasis-open.org/dita/v1.2/os/spec/langref/schemeref.html"
+            format="html" scope="external"/>
+        <linklist>
+            <linkinfo>Na tej stronie możesz się zapooznać z referencyjnym materiałem</linkinfo>
+        </linklist>
+    </related-links>
+</topic>
